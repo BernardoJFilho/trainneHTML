@@ -1,11 +1,15 @@
 * {
+    /* background-color: rgb(158, 197, 248); */
     text-align: center;
 }
 
 #globalDiv {
-    padding-top: 150px;
+    margin-top: 150px;
+    background-color: blue;
 }
 
 #inputsDiv {
+    display: flex;
+    justify-content: center;
     
 }
