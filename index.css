@@ -1,15 +1,25 @@
-* {
-    background-color: rgb(158, 197, 248);
+body {
+    background-image: url(/hero-rail-asia.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
 }
 
 #globalDiv {
     text-align: center;
     margin-top: 150px;
-    background-color: blue;
+    background-color: rgba(94, 94, 94, 0.815);
+    backdrop-filter: blur(3px);
+    padding-top: 1px;
     width: 700px;
+    height: 450px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+#globalDiv h3 {
+    font-size: 25px;
 }
 
 #globalDiv h1 {
@@ -18,8 +28,8 @@
     margin-left: auto;
     margin-right: auto;    
     background-color: rgb(255, 255, 255);
-    width: 500px;
-    border-radius: 150px;
+    width: 100%;
+    border-radius: 100%;
 }
 
 #globalDiv h3 {
@@ -27,11 +37,12 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    background-color: blue;
 }
 
-#teste, #inputsDiv, #buttonDiv, #labelCheck, #link {
-    background-color: blue;
+#labelCheck {
+    position: relative;
+    left: -90px;
+    color: white;
 }
 
 #inputsDiv input {
@@ -42,13 +53,39 @@
     width: 350px;
     height: 35px;
     border-radius: 10px;
-    border: solid 1px red;
+    border: solid 1px gray;
+}
+
+#inputsDiv input:hover {
+    border: solid 1px yellow;
 }
 
 #buttonDiv button {
     display: block;
     margin-top: 10px;
     margin-bottom: 10px;
+    width: 250px;
+    height: 35px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    border: solid 1px white;
 }
+
+#link {
+    color: rgb(0, 89, 255);
+}
+
+/* Estilizando o checkbox */
+#labelCheck input {
+    /* Cor da borda */
+    border-color: #333;
+    /* Cor de fundo */
+    background-color: #fff;
+    /* Cor do checkbox */
+    color: red;
+}
+
+
