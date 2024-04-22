@@ -1,5 +1,6 @@
 body {
     background-image: url(/hero-rail-asia.jpg);
+    background-image: url(hero-rail-asia.jpg);
     background-size: cover;
     background-position: center;
     min-height: 100vh;
