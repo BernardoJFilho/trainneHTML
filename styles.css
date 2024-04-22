@@ -1,6 +1,6 @@
 body {
-    background-image: url(/hero-rail-asia.jpg);
     background-image: url(hero-rail-asia.jpg);
+/*     background-image: url(/hero-rail-asia.jpg); */
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -78,15 +78,3 @@ body {
 #link {
     color: rgb(0, 89, 255);
 }
-
-/* Estilizando o checkbox */
-#labelCheck input {
-    /* Cor da borda */
-    border-color: #333;
-    /* Cor de fundo */
-    background-color: #fff;
-    /* Cor do checkbox */
-    color: red;
-}
-
-
