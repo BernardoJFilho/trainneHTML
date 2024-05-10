@@ -31,18 +31,35 @@ function teste(){
         } else {
             mensage.innerHTML = ''
             if (checkbox == true) {
-                for (let i = 0; i < cidades['idaEvolta'].length - 1; i++) {
-                    const element = cidades['idaEvolta'];
-                    if (origem.value == element[i] && destino.value == element[i + 1]) {
-                        alert('passou');
-                        break
-                    } else {
-                        console.log('nao passou');
-                    }
+                if (funcCheckbox(origem, destino) == false){
+                    const mensage = 'Nao tem passagens de ida e volta para esses lugares';
+                    alert(mensage)
+                    check1.checked = false;
+                    break;
                 }
+                else {
+                    const mensage = 'Buscando dados';
+                    alert(mensage);
+                    break;
+                }
+            }
+            else {
+                const mensage = 'Buscando dados';
+                alert(mensage);
+                break;
             }
         }
     }
+}
+
+const funcCheckbox = (param1, param2) => {
+    for (let i = 0; i < cidades['idaEvolta'].length - 1; i++) {
+        const element = cidades['idaEvolta'];
+        if (param1.value == element[i] && param2.value == element[i + 1]) {
+            return true;
+        }
+    }
+    return false;
 }
 
 const listaIdaEvolta = cidades.idaEvolta;
