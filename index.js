@@ -6,7 +6,7 @@ const mensage = document.getElementById("mensage");
 const check1 = document.getElementById("check1");
 const cidadesId = document.getElementById("cidadesId");
 
-const cidades = { 
+const cidades = {
     'idaEvolta': [
         'Sao paulo',
         'Rio de janeiro',
@@ -68,7 +68,12 @@ const listaIda = cidades.ida;
 const gerar = (param) => {
     for (let i = 0; i < param.length - 1; i++) {
         const cidade = document.createElement("p");
-        const text = document.createTextNode(`${param[i]} -> ${param[i + 1]}, possui ida e volta`)
+        let text = ''
+        if (param.length == 4) {
+            text = document.createTextNode(`${param[i]} -> ${param[i + 1]}, possui passagem so de ida`)
+        } else {
+            text = document.createTextNode(`${param[i]} -> ${param[i + 1]}, possui ida e volta`)
+        }
         cidade.appendChild(text);
         cidadesId.appendChild(cidade);
     }
