@@ -22,34 +22,34 @@ const cidades = {
     ]
 }
 
-function clickButton(){
+const mensagens = () =>{
     const checkbox = check1.checked
-    const array = [origem, destino, passagens, classe];
-    for (let index = 0; index < array.length; index++) {
-        if (array[index].value === 0){
-            mensage.innerHTML = 'Preencha todos os campos'
-        } else {
+    if (checkbox) {
+        if (!funcCheckbox(origem, destino)){
             mensage.innerHTML = ''
-            if (checkbox) {
-                if (!funcCheckbox(origem, destino)){
-                    const mensagem = 'Nao tem passagens de ida e volta para esses lugares';
-                    alert(mensagem)
-                    check1.checked = false;
-                    break;
-                }
-                else {
-                    const mensagem = 'Buscando dados';
-                    alert(mensagem);
-                    break;
-                }
-            }
-            else {
-                const mensagem = 'Buscando dados';
-                alert(mensagem);
-                break;
-            }
+            const mensagem = 'Nao tem passagens de ida e volta para esses lugares';
+            alert(mensagem)
+            check1.checked = false;
+        }
+        else {
+            const mensagem = 'Buscando dados';
+            alert(mensagem);
         }
     }
+    else {
+        const mensagem = 'Buscando dados';
+        alert(mensagem);
+    }
+}
+
+function clickButton(){
+    const array = [origem, destino, passagens, classe];
+    for (let index = 0; index < array.length; index++) {
+        if (array[index].value.length === 0){
+            mensage.innerHTML = 'Preencha todos os campos';
+        } else mensage.innerHTML = '';
+    }
+    if (mensage.innerHTML === '') mensagens();
 }
 
 const funcCheckbox = (param1, param2) => {
