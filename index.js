@@ -22,7 +22,7 @@ const cidades = {
     ]
 }
 
-function teste(){
+function clickButton(){
     const checkbox = check1.checked
     const array = [origem, destino, passagens, classe];
     for (let index = 0; index < array.length; index++) {
